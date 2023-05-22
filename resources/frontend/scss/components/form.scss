@@ -1,0 +1,85 @@
+
+select {
+	-moz-appearance: none;
+	/* Firefox */
+	-webkit-appearance: none;
+	/* Safari and Chrome */
+	appearance: none;
+	display: block;
+	width: 100%;
+	font-size: 1em;
+	padding: 0.8rem 0.5rem;
+	border: 1px solid #333;
+	font-family: inherit;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 1rem center;
+	background-size: 1em;
+	margin-right: 0.5rem;
+	position: relative;
+	align-self: center;
+	&.select-hidden {
+		background-color: transparent;
+		border: 0;
+		display: none;
+	}
+	option {
+		color: #484848;
+		font-size: 12px;
+		padding: 10px !important;
+	}
+	.select-options {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		display: none;
+		z-index: 999;
+		border: 1px solid #ddd;
+		-ms-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		-o-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+		li {
+			color: #484848;
+			display: block;
+			margin-right: 0 !important;
+			display: block;
+			width: 100%;
+			font-size: 12px;
+			padding: 5px 15px;
+			cursor: pointer;
+			border-bottom: 1px solid #ddd;
+			background-color: #fff;
+			&:hover {
+				color: #fff;
+				background-color: var(--theme-color);
+			}
+		}
+	}
+}
+
+.select-styled {
+	position: relative;
+	cursor: pointer;
+	min-width: 115px;
+	padding: 10px 15px;
+	border-radius: 4px;
+	border: 1px solid #eeeeee;
+	&:after {
+		position: absolute;
+		content: "\f0140";
+		right: 5px;
+		top: 50%;
+		margin-top: -10px;
+		display: inline-block;
+		font: normal normal normal 24px/1 "Material Design Icons";
+		font-size: inherit;
+		text-rendering: auto;
+		line-height: inherit;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

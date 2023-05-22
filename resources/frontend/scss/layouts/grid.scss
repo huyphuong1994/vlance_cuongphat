@@ -1,0 +1,54 @@
+@for $i from 1 through 9 {
+    $width: calc(100 / $i) * 1%;
+    .grid-#{$i} {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        margin-right: -10px;
+        li {
+            padding-left: 10px;
+            padding-right: 10px;
+            flex: 0 0 $width;
+            max-width: $width;
+            &.col-x2 {
+                flex: 0 0 calc($width * 2);
+                max-width: calc($width * 2);
+            }
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        
+    }
+
+    @media screen and (max-width: 1368px) {
+        
+    }
+
+    @media screen and (max-width: 1280px) {
+        
+    }
+
+    @media screen and (max-width: 1136px) {
+        
+    }
+
+    @media screen and (max-width: 1024px) {
+        
+    }
+
+    @media screen and (max-width: 768px) {
+        
+    }
+
+    @media screen and (max-width: 512px) {
+        .products.grid-#{$i} {
+            li {
+                padding-left: 10px;
+                padding-right: 10px;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+}

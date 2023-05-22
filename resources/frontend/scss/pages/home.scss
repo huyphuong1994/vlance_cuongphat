@@ -1,0 +1,28 @@
+.category-products {
+    .category-list {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        .category-item {
+            border-radius: 5px;
+            padding: 6px 10px;
+            &-active {
+                border-radius: 10px;
+                padding: 10px 15px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .btn-seemore {
+        // position: absolute;
+        // top: 1.2em;
+        // right: 0;
+        justify-content: end;
+        @media screen and (max-width: 768px) {
+            position: relative;
+            justify-content: center;
+        }
+    }
+}
