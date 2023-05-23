@@ -22,7 +22,7 @@ class MediaController extends Controller
 
     public function index(Request $request)
     {
-        $medias     = $this->medias->paginate($request, get_pagination('media_paginate'));
+        $medias = $this->medias->paginate($request, get_pagination('media_paginate'));
 
         return view('admin.medias.index', compact('medias'));
     }

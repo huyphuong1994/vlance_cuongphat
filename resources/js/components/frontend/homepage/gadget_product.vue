@@ -28,7 +28,7 @@
 					<div class="col-md-4"
 					v-if="
 						setting &&
-						banners.length > 0 && 
+						banners.length > 0 &&
 						window.width >= breakpoint[4] &&
 						(setting.type == 1 || setting.type == 3)
 					">
@@ -150,7 +150,9 @@ export default {
 			return (this.data && this.data.setting) ? this.data.setting : null;
 		},
 		banners() {
-			return (this.data && this.data.banners) ? this.data.banners : [];
+      console.log('123', this.data)
+
+      return (this.data && this.data.banners) ? this.data.banners : [];
 		},
 		paginate() {
 			var paginate = 8;
@@ -175,7 +177,7 @@ export default {
 					case 5:
 						paginate = 10;
 						break;
-				
+
 					default:
 						break;
 				}
@@ -212,7 +214,7 @@ export default {
 		},
 		grid_class() {
 			var classes = '';
-				
+
 			if(this.window.width < this.breakpoint[1]) {
 				classes += 'grid-2';
 			} else if (this.window.width < this.breakpoint[4]) {
@@ -248,7 +250,7 @@ export default {
 							classes += ' grid-4';
 						}
 						break;
-				
+
 					default:
 						classes += ' grid-5';
 						break;

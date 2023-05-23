@@ -190,7 +190,7 @@ if (!function_exists('is_file_exists')) {
     {
         if (!blank($item) and !blank($storage)) :
             if ($storage == 'local') :
-                if (file_exists('public/' . $item)) :
+                if (file_exists($item)) :
                     return true;
                 endif;
             elseif ($storage == 'aws_s3') :
@@ -215,9 +215,9 @@ if (!function_exists('get_media')) {
         if (!blank($item) and !blank($storage)) :
             if ($storage == 'local') :
                 if($updater):
-                    return base_path('public/'.$item);
+                    return base_path($item);
                 else:
-                    return app('url')->asset('public/' . $item);
+                    return app('url')->asset($item);
                 endif;
             elseif ($storage == 'aws_s3') :
                 return Storage::disk('s3')->url($item);
@@ -725,7 +725,7 @@ if (!function_exists('fontURL')):
             case 'Quicksand':
                 $fonts_url = 'https://fonts.googleapis.com/css?family=Quicksand';
                 break;
-            
+
             default:
                 $fonts_url .= ':ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900';
                 break;
