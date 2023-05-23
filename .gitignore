@@ -1,6 +1,4 @@
 /node_modules
-/public/hot
-/images/*
 /public/mix-manifest.json
 
 #/public/frontend/js/frontendChunks/*
