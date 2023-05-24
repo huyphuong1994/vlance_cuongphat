@@ -190,7 +190,7 @@ if (!function_exists('is_file_exists')) {
     {
         if (!blank($item) and !blank($storage)) :
             if ($storage == 'local') :
-                if (file_exists($item)) :
+                if (file_exists('public/' . $item)) :
                     return true;
                 endif;
             elseif ($storage == 'aws_s3') :
@@ -215,9 +215,9 @@ if (!function_exists('get_media')) {
         if (!blank($item) and !blank($storage)) :
             if ($storage == 'local') :
                 if($updater):
-                    return base_path($item);
+                    return base_path('public/'.$item);
                 else:
-                    return app('url')->asset($item);
+                    return app('url')->asset('public/'.$item);
                 endif;
             elseif ($storage == 'aws_s3') :
                 return Storage::disk('s3')->url($item);

@@ -24,6 +24,7 @@ class MediaController extends Controller
     {
         $medias = $this->medias->paginate($request, get_pagination('media_paginate'));
 
+//        dd($medias);
         return view('admin.medias.index', compact('medias'));
     }
 
@@ -105,6 +106,7 @@ class MediaController extends Controller
             return response()->json(__('This function is disabled in demo server.'), 500);
         endif;
 
+        dd('ádfsd');
         $type = get_yrsetting('supported_mimes');
         if($request->hasFile('file')){
             $extension = strtolower($request->file('file')->getClientOriginalExtension());

@@ -1,9 +1,9 @@
 <template>
-	<section class="sg-blog-section item-space-rmv" v-if="lengthCounter(countBlog) > 0">
+	<section class="sg-blog-section item-space-rmv mt-4" v-if="lengthCounter(countBlog) > 0">
 		<div class="container" :class="{ 'slider-arrows' : addons.includes('ishopet') }">
-			<div class="title justify-content-between" :class="{ 'title-bg' : addons.includes('ishopet') }">
-				<h1>{{ lang.latest_news }}</h1>
-				<router-link :to="{ name: 'blogs' }">{{ lang.more }}<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>
+			<div class="title justify-content-center" :class="{ 'title-bg' : addons.includes('ishopet') }">
+				<h1 :style="{'color': settings.menu_background_color}" class="text-uppercase">{{ lang.latest_news }}</h1>
+<!--				<router-link :to="{ name: 'blogs' }">{{ lang.more }}<span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>-->
 			</div>
 			<VueSlickCarousel v-bind="slick_settings" :rtl="settings.text_direction == 'rtl'">
 				<div v-for="(blog, index) in blogs" :key="index" class="blog-pad">
@@ -32,7 +32,9 @@
 		</div><!-- /.container -->
 	</section><!-- /.sg-blog-section -->
 	<section class="sg-blog-section" v-else-if="show_shimmer">
-		<div class="container">
+    {{lengthCounter(countBlog)}}
+
+    <div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3" v-for="(count, index) in 4" :key="index">
 					<div class="post">

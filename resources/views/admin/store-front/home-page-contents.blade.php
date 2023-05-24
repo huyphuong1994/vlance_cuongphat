@@ -584,13 +584,14 @@
                             $categories = \App\Models\Category::with('childCategories.categories')->where('parent_id', null)->where('status',1)->get();
                         @endphp
                         @foreach($categories as $key => $category)
-                            {{-- <option value="{{ $category->id }}" {{ @$contents ? ($category->id == $contents['category_section']['category'] ? 'selected' : '') : '' }}>
-                                {{ $category->getTranslation('title', \App::getLocale()) }}
-                            </option> --}}
-                            
-                            <option value="{{ $category->id }}" {{ @$contents && arrayCheck('category', $contents['category_section']) ? (in_array($category->id, $contents['category_section']) ? 'selected' : '') : '' }}>
+{{--                            <option value="{{ $category->id }}" {{ @$contents ? ($category->id == $contents['category_section']['category'] ? 'selected' : '') : '' }}>--}}
+{{--                                {{ $category->getTranslation('title', \App::getLocale()) }}--}}
+{{--                            </option>--}}
+
+                            <option value="{{ $category->id }}" {{ @$contents && arrayCheck('category', $contents['category_section']) ? (in_array($category->id, $contents['category_section']['category']) ? 'selected' : '') : '' }}>
                                 {{ $category->getTranslation('title', \App::getLocale()) }}
                             </option>
+
 
                             @foreach ($category->childCategories as $childCategory)
                                 @include('admin.products.categories.child-categories', ['child_category' => $childCategory, 'parent' => @$contents ? $contents['category_section']['category'] : ''])

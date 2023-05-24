@@ -745,13 +745,14 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	justify-content: center;
 	/* gap: 20px; */
 	min-height: 50px !important;
 }
 
 /* SG Categorie Menu Start==== */
 .header-menu .bottom-content .sg-categorie-menu {
-	flex: 0 0 20%;
+	//flex: 0 0 20%;
 	position: relative;
 	max-width: 20%;
 }
@@ -1699,7 +1700,7 @@ span.toggle-bar {
 }
 
 .title h1 {
-	margin-bottom: 15px;
+	//margin-bottom: 15px;
 	font-size: 20px;
 	font-weight: 500;
 	align-self: center;
@@ -5492,7 +5493,7 @@ label {
 
 .footer-top .social ul li a {
 	color: #fff;
-	border: 1px solid #666666;
+	border: 1px solid #fff;
 }
 
 .footer-top .social ul li a:hover {
@@ -9275,7 +9276,7 @@ a.video-play-btn {
 	max-height: 100%;
 	margin: 0 auto;
 	max-width: 100%;
-	height: 500px;
+	height: 350px;
 	-o-object-fit: contain;
 	object-fit: contain;
 	cursor: pointer;
@@ -10261,6 +10262,22 @@ textarea.form-control.affiliate_link {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.gradet-bottom {
+	button {
+		border: 1px solid var(--btn-bg-color);
+		color: var(--btn-bg-color);
+		border-radius: 4px;
+		width: 100%;
+
+		.btn-seemore {
+			border-radius: 4px;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+		}
+	}
 }
 
 @import 'utils/development.scss';

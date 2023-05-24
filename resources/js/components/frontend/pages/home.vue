@@ -14,7 +14,7 @@
         :best_selling_product="componentName == 'best_selling_product' && homeResults[index] ? homeResults[index].data : []"
         :offer_ending_products="componentName == 'offer_ending' && homeResults[index] ? homeResults[index].data : []"
         :custom_products="componentName == 'custom_products' && homeResults[index] ? homeResults[index].data : []"
-        :blogs="componentName == 'blog' && homeResults[index] ? homeResults[index].data : []"
+        :blogs="componentName == 'latest_news' && homeResults[index] ? homeResults[index].data : []"
         :brands="componentName == 'brands' && homeResults[index] ? homeResults[index].data : []"
         :sellers="componentName == 'top_shop' && homeResults[index] ? homeResults[index].data : []"
         :best_shop="componentName == 'best_shop' && homeResults[index] ? homeResults[index].data : []"
@@ -26,7 +26,7 @@
         :campaigns="componentName == 'campaign' && homeResults[index] ? homeResults[index].data : []"
         :latest_products="componentName == 'latest_products' && homeResults[index] ? homeResults[index].data : []"
         :video_shopping="addons.includes('video_shopping') && componentName == 'video_shopping' && homeResults[index] ? homeResults[index].data : []">
-      ></component>
+      </component>
     </div>
 
     <viewed_product v-if="settings.recent_viewed == 1"></viewed_product>
@@ -87,7 +87,7 @@ export default {
     category_section: gadget_product,
     best_selling_product: best_selling_product,
     offer_ending_soon: offer_ending,
-    blog: blog,
+    latest_news: blog,
     custom_products: custom_products,
     viewed_product: viewed_product,
     subscribe: subscribe,
@@ -109,6 +109,7 @@ export default {
   },
   computed: {
     homeComponents() {
+      console.log('123', this.$store.getters.getHomeComponents)
       return this.$store.getters.getHomeComponents;
     },
     homeResults() {

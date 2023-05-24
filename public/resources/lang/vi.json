@@ -1717,7 +1717,7 @@
     "download_link": "Download Link",
     "user_reward_read": "User Reward Read",
     "user_reward_update": "User Reward Update",
-    "popular_categories": "Danh mục nổi bật",
+    "popular_categories": "DANH MỤC",
     "browse_all_categories": "Browse All Categories",
     "best_selling_product": "Best Selling Product",
     "top_categories_of_this_month": "Top Categories of This Month",
@@ -1726,7 +1726,7 @@
     "best_related_products": "Best Rated Product",
     "more_products": "More Products",
     "best_shop": "Best Shop",
-    "latest_news": "Latest News",
+    "latest_news": "Tin tức",
     "popular_brand": "Popular Brand",
     "browse_all_brands": "Browse All Brands",
     "more_campaign": "More Campaign",
@@ -2076,7 +2076,7 @@
     "digital_product_order": "Digital Product Order",
     "migrate_to_seller": "Migrate To Seller",
     "shop": "Shop",
-    "logout": "Logout",
+    "logout": "Đăng xuất",
     "enter_point_you_want_convert": "Enter Reward Point You want to Convert",
     "reward_points": " Reward Points = ",
     "total_amount_you_will_get": "Total Amount You will Get :",
@@ -2834,5 +2834,9 @@
     "cron": "Cron",
     "for_more_info_click_here": "For More Info Click Here",
     "run_cron_manually": "Run Cron Manually",
-    "subscription_checked_successfully": "Subscription checked successfully"
+    "subscription_checked_successfully": "Subscription checked successfully",
+    "xem_toan_bo": "Xem toàn bộ",
+    "xem_them_12": "Xem thêm 12 sản phẩm",
+    "thu_gon": "Thu gọn",
+    "danh_muc_sp_noi_bat": "Danh mục sản phẩm nổi bật"
 }

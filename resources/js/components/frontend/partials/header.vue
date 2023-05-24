@@ -20,13 +20,38 @@
                   </svg>
                 </a>
                 <a href="https://youtube.com">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path fill="currentColor"
-                          d="m10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73Z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                       viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                       stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                       font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                       style="mix-blend-mode: normal">
+                      <g transform="scale(5.33333,5.33333)">
+                        <path
+                            d="M15,36v-29.173l-1.211,-0.811c-5.149,2.067 -8.789,7.096 -8.789,12.984v10c0,7.732 6.268,14 14,14h10c4.722,0 8.883,-2.348 11.417,-5.931v-1.069z"
+                            fill="#f05538"/>
+                        <path
+                            d="M29,5h-10c-1.845,0 -3.601,0.366 -5.214,1.014c-3.333,3.236 -5.786,8.514 -5.786,12.986c0,6.771 0.936,10.735 3.712,14.607c0.216,0.301 0.357,0.653 0.376,1.022c0.043,0.835 -0.129,2.365 -1.634,3.742c-0.162,0.148 -0.059,0.419 0.16,0.428c0.942,0.041 2.843,-0.014 4.797,-0.877c0.557,-0.246 1.191,-0.203 1.729,0.083c3.313,1.759 7.193,1.995 10.86,1.995c4.676,0 9.339,-1.04 12.417,-2.916c1.621,-2.285 2.583,-5.07 2.583,-8.084v-10c0,-7.732 -6.268,-14 -14,-14z"
+                            fill="#eeeeee"/>
+                        <path
+                            d="M36.75,27c-2.067,0 -3.75,-1.683 -3.75,-3.75c0,-2.067 1.683,-3.75 3.75,-3.75c2.067,0 3.75,1.683 3.75,3.75c0,2.067 -1.683,3.75 -3.75,3.75zM36.75,21c-1.24,0 -2.25,1.01 -2.25,2.25c0,1.24 1.01,2.25 2.25,2.25c1.24,0 2.25,-1.01 2.25,-2.25c0,-1.24 -1.01,-2.25 -2.25,-2.25z"
+                            fill="#f05538"/>
+                        <path d="M31.5,27h-1c-0.276,0 -0.5,-0.224 -0.5,-0.5v-8.5h1.5z" fill="#f05538"/>
+                        <path
+                            d="M27,19.75v0.519c-0.629,-0.476 -1.403,-0.769 -2.25,-0.769c-2.067,0 -3.75,1.683 -3.75,3.75c0,2.067 1.683,3.75 3.75,3.75c0.847,0 1.621,-0.293 2.25,-0.769v0.269c0,0.276 0.224,0.5 0.5,0.5h1v-7.25zM24.75,25.5c-1.24,0 -2.25,-1.01 -2.25,-2.25c0,-1.24 1.01,-2.25 2.25,-2.25c1.24,0 2.25,1.01 2.25,2.25c0,1.24 -1.01,2.25 -2.25,2.25z"
+                            fill="#f05538"/>
+                        <path
+                            d="M21.25,18h-8v1.5h5.321l-5.571,6.5h0.026c-0.163,0.211 -0.276,0.463 -0.276,0.75v0.25h7.5c0.276,0 0.5,-0.224 0.5,-0.5v-1h-5.321l5.571,-6.5h-0.026c0.163,-0.211 0.276,-0.463 0.276,-0.75z"
+                            fill="#f05538"/>
+                      </g>
+                    </g>
                   </svg>
                 </a>
                 <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path fill="currentColor" d="m20.33 21.48l2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36">
+                    <path fill="currentColor"
+                          d="m20.33 21.48l2.24-2.24a2.19 2.19 0 0 1 2.34-.48l2.73 1.09a2.18 2.18 0 0 1 1.36 2v5A2.17 2.17 0 0 1 26.72 29C7.59 27.81 3.73 11.61 3 5.41A2.17 2.17 0 0 1 5.17 3H10a2.16 2.16 0 0 1 2 1.36l1.09 2.73a2.16 2.16 0 0 1-.47 2.34l-2.24 2.24s1.29 8.73 9.95 9.81Z"/>
+                  </svg>
                 </a>
                 <a :href="'tel:' + settings.header_contact_phone" class="live-chat">
                   <strong>{{ settings.header_contact_phone }}</strong>
@@ -65,7 +90,7 @@
               <li v-if="settings.topbar_play_store_link == 1">
                 <a :href="settings.play_store_link" target="_blank"><span
                     class="mdi mdi-name mdi-google-play"></span> <small>{{
-                  lang.play_store
+                    lang.play_store
                   }}</small></a>
               </li>
               <li v-if="settings.topbar_app_store_link == 1">
@@ -93,8 +118,8 @@
             <ul class="global-list">
               <li>
                 <router-link :to="{ name: '' }">
-<!--                  <span class="mdi mdi-name mdi-map-marker-outline"></span>-->
-                  {{lang.notification}}
+                  <!--                  <span class="mdi mdi-name mdi-map-marker-outline"></span>-->
+                  {{ lang.notification }}
                 </router-link>
               </li>
               <li>
@@ -107,33 +132,33 @@
                   {{ lang.Signup }}
                 </router-link>
               </li>
-<!--              <li>-->
-<!--                <router-link :to="{ name: 'blogs' }">{{ lang.blog }}</router-link>-->
-<!--              </li>-->
+              <!--              <li>-->
+              <!--                <router-link :to="{ name: 'blogs' }">{{ lang.blog }}</router-link>-->
+              <!--              </li>-->
               <template class="d-flex user-log-info" v-if="authUser">
                 <!-- <a :href="'tel:' + settings.header_contact_phone" class="live-chat">
                   <div class="icon"><span><img alt="Phone Icon" class="img-fluid"
                         :src="getUrl('public/images/others/phone.svg')" /></span></div>
                 </a> -->
-<!--                <li v-if="authUser.user_type == 'customer'">-->
-<!--                  <router-link class="d-block" :to="{ name: 'dashboard' }">-->
-<!--                    {{ lang.profile }}-->
-<!--                  </router-link>-->
-<!--                </li>-->
-<!--                <li v-if="authUser.user_type == 'seller'">-->
-<!--                  <a class="d-block" :href="getUrl('seller/dashboard')">{{ lang.dashboard }}</a>-->
-<!--                </li>-->
-<!--                <li v-if="authUser.user_type == 'admin' || authUser.user_type == 'staff'">-->
-<!--                  <a class="d-block" :href="getUrl('admin/dashboard')">{{lang.dashboard}}</a>-->
-<!--                </li>-->
+                <!--                <li v-if="authUser.user_type == 'customer'">-->
+                <!--                  <router-link class="d-block" :to="{ name: 'dashboard' }">-->
+                <!--                    {{ lang.profile }}-->
+                <!--                  </router-link>-->
+                <!--                </li>-->
+                <!--                <li v-if="authUser.user_type == 'seller'">-->
+                <!--                  <a class="d-block" :href="getUrl('seller/dashboard')">{{ lang.dashboard }}</a>-->
+                <!--                </li>-->
+                <!--                <li v-if="authUser.user_type == 'admin' || authUser.user_type == 'staff'">-->
+                <!--                  <a class="d-block" :href="getUrl('admin/dashboard')">{{lang.dashboard}}</a>-->
+                <!--                </li>-->
                 <li>
-                  <a href="javascript:void(0)" @click="logout">{{ lang.logout }}</a>
+                  <a href="javascript:void(0)" @click="logout">{{ lang.Login }}</a>
                 </li>
               </template>
               <template v-else>
                 <li>
                   <router-link class="d-block" :to="{ name: 'login' }">
-                    {{lang.sign_in}}
+                    {{ lang.sign_in }}
                   </router-link>
                 </li>
                 <li>
@@ -178,8 +203,8 @@
               </sidebar_categories>
             </div>
             <router-link :to="{ name: 'home' }">
-                <img  :src="getUrl('public/logoxdsv.svg')"></img>
-<!--              <img v-else :src="settings.dark_logo" alt="Logo" class="img-fluid"/>-->
+              <img :src="getUrl('public/logoxdsv.svg')"></img>
+              <!--              <img v-else :src="settings.dark_logo" alt="Logo" class="img-fluid"/>-->
             </router-link>
           </div>
           <div class="sg-search">
@@ -190,7 +215,7 @@
                        @click.stop="searchDropdown"/>
                 <a class="search_btn cursor_pointer"
                    @click="$router.push({ name: 'search.product', query: { q: searchKey } })">
-                  <img :src="getUrl('public/images/others/search.svg')" alt="Product Search"
+                  <img :src="getUrl('public/public/images/others/search.svg')" alt="Product Search"
                        class="img-fluid"/>
                 </a>
                 <ul @click.stop class="dropdown-menu dropdown-menu-right show w-100 search_dropdown"
@@ -210,8 +235,8 @@
                           <h4>
 														<span class="price"><del
                                 v-if="product.special_discount_check > 0">{{
-																	priceFormat(product.price)
-																}}</del>
+                                priceFormat(product.price)
+                              }}</del>
 															<span v-if="product.special_discount_check > 0">
 																{{ priceFormat(product.discount_percentage) }}
 															</span>
@@ -230,30 +255,30 @@
                  v-if="!addons.includes('ishopet')">
               <div class="container">
                 <div class="bottom-content">
-                  <!--          <div class="sg-categorie-menu categorie-lg align-self-lg-center">-->
-                  <!--            <div class="top-content">-->
-                  <!--              <button class="sg-toggle" @click="toggleCategory">-->
-                  <!--                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">-->
-                  <!--                  <g id="list" transform="translate(0 -3)">-->
-                  <!--                    <path id="Path_4186" data-name="Path 4186"-->
-                  <!--                          d="M7,6H23a1,1,0,0,0,0-2H7A1,1,0,0,0,7,6Z" fill="#fff"/>-->
-                  <!--                    <path id="Path_4187" data-name="Path 4187"-->
-                  <!--                          d="M23,11H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
-                  <!--                    <path id="Path_4188" data-name="Path 4188"-->
-                  <!--                          d="M23,18H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
-                  <!--                    <circle id="Ellipse_349" data-name="Ellipse 349" cx="2" cy="2" r="2"-->
-                  <!--                            transform="translate(0 3)" fill="#fff"/>-->
-                  <!--                    <circle id="Ellipse_350" data-name="Ellipse 350" cx="2" cy="2" r="2"-->
-                  <!--                            transform="translate(0 10)" fill="#fff"/>-->
-                  <!--                    <circle id="Ellipse_351" data-name="Ellipse 351" cx="2" cy="2" r="2"-->
-                  <!--                            transform="translate(0 17)" fill="#fff"/>-->
-                  <!--                  </g>-->
-                  <!--                </svg>-->
-                  <!--              </button>-->
-                  <!--              <span>{{ lang.all_categories }}</span>-->
-                  <!--            </div>-->
-                  <!--            <sidebar_categories ref="sidebar_category" :home="1"></sidebar_categories>-->
-                  <!--          </div>-->
+                            <div class="sg-categorie-menu categorie-lg align-self-lg-center">
+<!--                              <div class="top-content">-->
+<!--                                <button class="sg-toggle" @click="toggleCategory">-->
+<!--                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">-->
+<!--                                    <g id="list" transform="translate(0 -3)">-->
+<!--                                      <path id="Path_4186" data-name="Path 4186"-->
+<!--                                            d="M7,6H23a1,1,0,0,0,0-2H7A1,1,0,0,0,7,6Z" fill="#fff"/>-->
+<!--                                      <path id="Path_4187" data-name="Path 4187"-->
+<!--                                            d="M23,11H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
+<!--                                      <path id="Path_4188" data-name="Path 4188"-->
+<!--                                            d="M23,18H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
+<!--                                      <circle id="Ellipse_349" data-name="Ellipse 349" cx="2" cy="2" r="2"-->
+<!--                                              transform="translate(0 3)" fill="#fff"/>-->
+<!--                                      <circle id="Ellipse_350" data-name="Ellipse 350" cx="2" cy="2" r="2"-->
+<!--                                              transform="translate(0 10)" fill="#fff"/>-->
+<!--                                      <circle id="Ellipse_351" data-name="Ellipse 351" cx="2" cy="2" r="2"-->
+<!--                                              transform="translate(0 17)" fill="#fff"/>-->
+<!--                                    </g>-->
+<!--                                  </svg>-->
+<!--                                </button>-->
+<!--                                <span>{{ lang.all_categories }}</span>-->
+<!--                              </div>-->
+                              <sidebar_categories ref="sidebar_category" :home="1"></sidebar_categories>
+                            </div>
                   <div class="right-content">
                     <div class="sg-menu d-flex justify-content-between">
                       <nav class="navbar navbar-expand-lg">
@@ -297,19 +322,19 @@
 
                     </div>
                   </div>
-<!--                  <div class="offer">-->
-<!--                    <router-link :to="{ name: 'daily.deals' }">-->
-<!--                      <span class="daily&#45;&#45;icon">-->
-<!--                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"-->
-<!--                             height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">-->
-<!--                          <path-->
-<!--                              d="M21.4 11.6l-9-9C12 2.2 11.5 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .5.2 1 .6 1.4l9 9c.4.4.9.6 1.4.6c.5 0 1-.2 1.4-.6l7-7c.4-.4.6-.9.6-1.4c0-.5-.2-1-.6-1.4M13 20l-9-9V4h7l9 9M6.5 5C7.3 5 8 5.7 8 6.5S7.3 8 6.5 8S5 7.3 5 6.5S5.7 5 6.5 5m3.6 3.9l1.4-1.4L17 13l-1.4 1.4l-5.5-5.5m-2.5 2.5L9 10l4 4l-1.4 1.4l-4-4z"-->
-<!--                              fill="#fff"/>-->
-<!--                        </svg>-->
-<!--                        {{ lang.daily_deals }}-->
-<!--                      </span>-->
-<!--                    </router-link>-->
-<!--                  </div>-->
+                  <!--                  <div class="offer">-->
+                  <!--                    <router-link :to="{ name: 'daily.deals' }">-->
+                  <!--                      <span class="daily&#45;&#45;icon">-->
+                  <!--                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"-->
+                  <!--                             height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">-->
+                  <!--                          <path-->
+                  <!--                              d="M21.4 11.6l-9-9C12 2.2 11.5 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .5.2 1 .6 1.4l9 9c.4.4.9.6 1.4.6c.5 0 1-.2 1.4-.6l7-7c.4-.4.6-.9.6-1.4c0-.5-.2-1-.6-1.4M13 20l-9-9V4h7l9 9M6.5 5C7.3 5 8 5.7 8 6.5S7.3 8 6.5 8S5 7.3 5 6.5S5.7 5 6.5 5m3.6 3.9l1.4-1.4L17 13l-1.4 1.4l-5.5-5.5m-2.5 2.5L9 10l4 4l-1.4 1.4l-4-4z"-->
+                  <!--                              fill="#fff"/>-->
+                  <!--                        </svg>-->
+                  <!--                        {{ lang.daily_deals }}-->
+                  <!--                      </span>-->
+                  <!--                    </router-link>-->
+                  <!--                  </div>-->
                 </div>
               </div>
             </div>
@@ -337,11 +362,11 @@
                 <router-link :to="{ name: 'cart' }" class="d-flex align-items-center gap-3">
                   <div class="icon">
                     <img alt="bag Icon" class="img-fluid"
-                         :src="getUrl('public/images/others/bag_white.svg')"/>
+                         :src="getUrl('public/public/images/others/bag_white.svg')"/>
                     <span v-if="carts && carts.length > 0" class="badge">{{
-											carts.filter(cart =>
-												cart.is_buy_now == false).length
-										}}</span>
+                        carts.filter(cart =>
+                            cart.is_buy_now == false).length
+                      }}</span>
                   </div>
                   <div class="text-white text-bold text-uppercase pl-4" v-if="!carts || carts.length == 0">Giỏ hàng
                   </div>
@@ -437,7 +462,7 @@
                 v-if="Object.keys(menu).length > 2"
                 class="icon mdi mdi-name mdi-chevron-down"></span></a>
             <router-link v-else :to="menu.url" :class="{ active: menu.url == $route.fullPath }"> {{
-              menu.label
+                menu.label
               }}<span v-if="Object.keys(menu).length > 2"
                       class="icon mdi mdi-name mdi-chevron-down"></span></router-link>
             <ul class="sg-dropdown-menu"
@@ -508,7 +533,7 @@
                 <router-link
                     :to="{ name: 'product.by.category', params: { slug: child_category.slug } }">
                   <p class="mb-0" @click="$store.commit('setSmCategory', false)">{{
-                    child_category.title
+                      child_category.title
                     }}</p>
                 </router-link>
                 <ul class="sg-dropdown-menu"
@@ -519,7 +544,7 @@
                     <router-link
                         :to="{ name: 'product.by.category', params: { slug: children_category.slug } }">
                       <p class="mb-0" @click="$store.commit('setSmCategory', false)">{{
-                        children_category.title
+                          children_category.title
                         }}</p>
                     </router-link>
                   </li>

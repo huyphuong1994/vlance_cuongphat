@@ -76,7 +76,7 @@
                                             <div class="article-header">
                                                 <label class="imagecheck mb-4">
                                                     <figure class="imagecheck-figure">
-                                                    @if($media->type == 'image' && @is_file_exists($media->image_variants['image_190x230'] , $media->storage))
+                                                        @if($media->type == 'image' && @is_file_exists($media->image_variants['image_190x230'] , $media->storage))
                                                             <img src="{{ get_media($media->image_variants['image_190x230'], $media->storage) }}"
                                                                  alt="{{ $media->name }}"
                                                                  class="imagecheck-image article-image">

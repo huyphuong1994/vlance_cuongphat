@@ -51,6 +51,12 @@ class StoreFrontController extends Controller
 
     public function homePage()
     {
+//        dd(settingHelper('home_page_contents'));
+        $categories = \App\Models\Category::with('childCategories.categories')->where('parent_id', null)->where('status',1)->get();
+
+//        foreach ($categories as $key => $category) {
+//            dd($category);
+//        }
         $languages = $this->languages->all()->orderBy('id', 'asc')->get();
         return view('admin.store-front.home-page', compact('languages'));
     }

@@ -4,10 +4,10 @@
       <div class="row" v-if="countBanner > 0">
         <div v-for="(banner,index) in banners" :key="index" :class="defineClass()">
           <a v-if="urlCheck(banner)" :href="banner" class="add-banner">
-            <img :src="index.slice(0, -2)" alt="Image" class="img-fluid">
+            <img :src="index.slice(0, -2)" alt="Image" class="img-fluid" style="max-height: 200px">
           </a>
           <router-link v-else :to="banner" class="add-banner" :id="index.substr(-2,2)">
-            <img :src="index.slice(0, -2)" :alt="index" class="img-fluid">
+            <img :src="index.slice(0, -2)" :alt="index" class="img-fluid" style="max-height: 200px">
           </router-link>
         </div>
       </div>

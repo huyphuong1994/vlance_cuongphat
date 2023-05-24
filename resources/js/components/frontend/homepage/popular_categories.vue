@@ -1,38 +1,53 @@
 <template>
-  <section class="categories-section">
+  <section class="categories-section"
+           style="
+           background-image: url('../public/images/baner-category.png');
+           margin-top: 30px;
+">
     <div class="container" v-if="lengthCounter(countCategories) >0">
-      <div class="title justify-content-between" :class="{ 'title-bg' : addons.includes('ishopet') }">
-        <h1>{{ lang.popular_categories }}</h1>
-        <a :href="getUrl('categories')"
-           @click.prevent="routerNavigator('categories',null)">{{ lang.browse_all_categories }} <span
-            class="icon mdi mdi-name mdi-arrow-right"></span></a>
+      <div class="justify-content-between" :class="{ 'title-bg' : addons.includes('ishopet') }">
+        <h1 class="text-white fw-bolder">{{ lang.popular_categories }}</h1>
+<!--        <a :href="getUrl('categories')"-->
+<!--           @click.prevent="routerNavigator('categories',null)">{{ lang.browse_all_categories }} <span-->
+<!--            class="icon mdi mdi-name mdi-arrow-right"></span></a>-->
       </div>
       <div class="category-content" :class="{ 'slider-arrows ishopet-category' : addons.includes('ishopet') }">
-        <VueSlickCarousel v-bind="slick_settings" :rtl="settings.text_direction == 'rtl'">
-          <div class="global-list category-slider"
-               v-for="(category,index) in popular_categories" :key="index">
-            <a class="slider_div" @mouseup="checkEl($event)" :href="getUrl('category/'+category.slug)"
-               @click.prevent="routerNavigator('product.by.category',category.slug)">
-              <img :src="category.popular_image"
-                   :alt="category.title" class="img-fluid"><span>{{ category.title }}</span>
-            </a>
-          </div>
-        </VueSlickCarousel>
-      </div>
-    </div>
+<!--        <VueSlickCarousel v-bind="slick_settings" :rtl="settings.text_direction == 'rtl'">-->
+<!--          <div class="global-list category-slider"-->
+<!--               v-for="(category,index) in popular_categories" :key="index">-->
+<!--            <a class="slider_div" @mouseup="checkEl($event)" :href="getUrl('category/'+category.slug)"-->
+<!--               @click.prevent="routerNavigator('product.by.category',category.slug)">-->
+<!--              <img :src="category.popular_image"-->
+<!--                   :alt="category.title" class="img-fluid"><span>{{ category.title }}</span>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </VueSlickCarousel>-->
 
-    <div class="container" v-else-if="show_shimmer">
-      <div class="category-content">
-        <div class="d-flex">
-          <div class="global-list category-slider"
-               v-for="(category,index) in 6" :key="index">
-            <a :href="getUrl('category/'+category.slug)">
-              <shimmer :height="160"></shimmer>
-            </a>
+        <div class="row">
+          <div class="col-lg-3 mb-4" v-for="(category,index) in popular_categories" :key="index">
+              <div class="w-100 d-flex align-middle" style="background: #e6dbb9;">
+                <a class="slider_div py-3 px-4 fs-5 fw-normal" @mouseup="checkEl($event)" :href="getUrl('category/'+category.slug)"
+                   @click.prevent="routerNavigator('product.by.category',category.slug)">
+                {{category.title}}
+                </a>
+              </div>
           </div>
         </div>
       </div>
     </div>
+
+<!--    <div class="container" v-else-if="show_shimmer">-->
+<!--      <div class="category-content">-->
+<!--        <div class="d-flex">-->
+<!--          <div class="global-list category-slider"-->
+<!--               v-for="(category,index) in 6" :key="index">-->
+<!--            <a :href="getUrl('category/'+category.slug)">-->
+<!--              <shimmer :height="160"></shimmer>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </section>
 </template>
 
