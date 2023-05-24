@@ -1133,8 +1133,8 @@ textarea.form-control::-webkit-scrollbar-thumb {
 /* SG Categorie Menu End==== */
 /* Right Content Start==== */
 .header-menu .bottom-content .right-content {
-	flex: 0 0 60%;
-	max-width: 60%;
+	//flex: 0 0 60%;
+	//max-width: 60%;
 	display: flex;
 	justify-content: center;
 }
@@ -1158,8 +1158,8 @@ textarea.form-control::-webkit-scrollbar-thumb {
 	color: var(--menu-text-color);
 	position: relative;
 	padding: 16px 17px;
-	font-size: 14px;
-	font-weight: 500;
+	font-size: 16px;
+	font-weight: 900;
 }
 
 .sg-menu .navbar li a.active {
@@ -2402,7 +2402,7 @@ ul.products {
 	text-transform: uppercase;
 }
 
-.brand-social 
+.brand-social
 
 .brand-social {
 	margin-bottom: 20px;
@@ -5430,12 +5430,12 @@ label {
 
 /* footer-section */
 .footer-section {
-	background-color: #333;
+	background-color: #f05538;
 }
 
 .footer-section.footer-bg {
 	color: #b7c2d1;
-	background-color: #101a23;
+	background-color:  #f05538;
 }
 
 .footer-section.footer-bg a {
