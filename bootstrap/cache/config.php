@@ -204,7 +204,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/framework/cache/data',
+        'path' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -374,7 +374,7 @@
       array (
         'driver' => 'mysql',
         'url' => NULL,
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => '3306',
         'database' => 'test',
         'username' => 'root',
@@ -394,7 +394,7 @@
       array (
         'driver' => 'pgsql',
         'url' => NULL,
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => '3306',
         'database' => 'test',
         'username' => 'root',
@@ -409,7 +409,7 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => '127.0.0.1',
+        'host' => 'localhost',
         'port' => '3306',
         'database' => 'test',
         'username' => 'root',
@@ -454,12 +454,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/app',
+        'root' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/public/app/public',
+        'root' => 'E:\\Vlance\\CuongPhat\\yooricp\\public\\app/public',
         'url' => 'http://127.0.0.1:8000/storage',
         'visibility' => 'public',
       ),
@@ -489,7 +489,7 @@
     ),
     'links' => 
     array (
-      '/Users/daophuong/Documents/Vlance/vlance_cuongphat/public/storage' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/app/public',
+      'E:\\Vlance\\CuongPhat\\yooricp\\public\\storage' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -755,13 +755,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/logs/laravel.log',
+        'path' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/logs/laravel.log',
+        'path' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -812,7 +812,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/logs/laravel.log',
+        'path' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -881,7 +881,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/resources/views/vendor/mail',
+        0 => 'E:\\Vlance\\CuongPhat\\yooricp\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -894,11 +894,11 @@
     'keywords' => '',
     'creator' => 'Laravel Pdf',
     'display_mode' => 'fullpage',
-    'tempDir' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/../temp/',
+    'tempDir' => 'E:\\Vlance\\CuongPhat\\yooricp\\../temp/',
     'pdf_a' => false,
     'pdf_a_auto' => false,
     'icc_profile_path' => '',
-    'font_path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/resources/fonts',
+    'font_path' => 'E:\\Vlance\\CuongPhat\\yooricp\\resources/fonts',
     'font_data' => 
     array (
       'en' => 
@@ -1108,7 +1108,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/framework/sessions',
+    'files' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -1196,8 +1196,8 @@
     ),
     'scan_paths' => 
     array (
-      0 => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/app',
-      1 => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/resources',
+      0 => 'E:\\Vlance\\CuongPhat\\yooricp\\app',
+      1 => 'E:\\Vlance\\CuongPhat\\yooricp\\resources',
     ),
     'ui_url' => 'http://127.0.0.1:8000/admin/languages',
     'database' => 
@@ -1211,9 +1211,9 @@
   array (
     'paths' => 
     array (
-      0 => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/resources/views',
+      0 => 'E:\\Vlance\\CuongPhat\\yooricp\\resources\\views',
     ),
-    'compiled' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/framework/views',
+    'compiled' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\framework\\views',
   ),
   'yrsetting' => 
   array (
@@ -1861,7 +1861,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/debugbar',
+      'path' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\debugbar',
       'connection' => NULL,
       'provider' => '',
       'hostname' => '127.0.0.1',
@@ -1999,7 +1999,7 @@
   array (
     'paths' => 
     array (
-      'env' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat',
+      'env' => 'E:\\Vlance\\CuongPhat\\yooricp',
       'backupDirectory' => 'env-editor',
     ),
     'envFileName' => '.env',
@@ -2125,7 +2125,7 @@
     ),
     'temporary_files' => 
     array (
-      'local_path' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/framework/cache/laravel-excel',
+      'local_path' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\framework/cache/laravel-excel',
       'remote_disk' => NULL,
       'remote_prefix' => NULL,
       'force_resync_remote' => NULL,
@@ -2136,7 +2136,7 @@
     'encoding' => 'UTF-8',
     'finalize' => true,
     'ignoreNonStrings' => false,
-    'cachePath' => '/Users/daophuong/Documents/Vlance/vlance_cuongphat/storage/app/purifier',
+    'cachePath' => 'E:\\Vlance\\CuongPhat\\yooricp\\storage\\app/purifier',
     'cacheFileMode' => 493,
     'settings' => 
     array (
