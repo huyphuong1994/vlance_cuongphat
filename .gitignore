@@ -15,7 +15,7 @@
 /public/files/*
 /storage/*.key
 /vendor
-.env
+#.env
 composer.lock
 .env.backup
 .phpunit.result.cache

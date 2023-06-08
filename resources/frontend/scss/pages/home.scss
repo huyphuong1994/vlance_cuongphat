@@ -5,12 +5,16 @@
         overflow-y: hidden;
         white-space: nowrap;
         .category-item {
-            border-radius: 5px;
+            border-radius: 100px;
             padding: 6px 10px;
+            margin-left: 4px;
+
             &-active {
-                border-radius: 10px;
+                border-radius: 0;
                 padding: 10px 15px;
                 font-weight: bold;
+                text-transform: uppercase;
+                margin-left: -4px;
             }
         }
     }

@@ -5,9 +5,21 @@
                 <a href="javaScript:void(0)" class="d-flex"><i class="bx bx-menu move"></i>
                     <h4>{{ __('Banner') }}</h4>
                 </a>
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+
+                <div class="">
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body mobile_banner banner-{{ $content_count }}">
                 <div class="alert alert-light alert-has-icon p-0">
@@ -240,7 +252,7 @@
                 @endif
 
             </div>
-            <div class="row">
+            <div class="row add-{{ $content_count }}">
                 <div class="col-md-6 ml-4 mb-2">
                     <a href="javaScript:void(0)"
                        class="btn btn-outline-secondary add-home-content {{ @$key >= 3 ? 'd-none' : '' }}"
@@ -409,9 +421,19 @@
                     <h4>{{ __('Campaigns') }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body campaign-{{ $content_count }}">
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -438,9 +460,19 @@
                     <h4>{{ __('Popular Categories') }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body campaign-{{ $content_count }}">
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -470,9 +502,19 @@
                     <h4>{{ __('Top Categories') }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body campaign-{{ $content_count }}">
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -517,9 +559,19 @@
                     <h4>{{ __("Latest Products") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
             <input type="hidden" name="contents[]" value="latest_product">
@@ -534,9 +586,19 @@
                     <h4>{{ __("Flash Deal") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
             <input type="hidden" name="contents[]" value="flash_deal">
@@ -551,9 +613,19 @@
                     <h4>{{ __("Best Selling Products") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
             <input type="hidden" name="contents[]" value="best_selling_products">
@@ -568,9 +640,19 @@
                     <h4>{{ __("Category Sections") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body campaign-{{ $content_count }}">
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -578,15 +660,15 @@
                 <input type="hidden" name="category_section_{{ $content_count }}[]" value="{{ $content_count }}">
                 <div class="form-group">
                     <select class="form-control select2 lang" name="category_section_{{ $content_count }}_category[]"
-                    multiple equired>
+                            multiple equired>
                         <option value="">{{ __('Select Categories') }}</option>
                         @php
                             $categories = \App\Models\Category::with('childCategories.categories')->where('parent_id', null)->where('status',1)->get();
                         @endphp
                         @foreach($categories as $key => $category)
-{{--                            <option value="{{ $category->id }}" {{ @$contents ? ($category->id == $contents['category_section']['category'] ? 'selected' : '') : '' }}>--}}
-{{--                                {{ $category->getTranslation('title', \App::getLocale()) }}--}}
-{{--                            </option>--}}
+                            {{--                            <option value="{{ $category->id }}" {{ @$contents ? ($category->id == $contents['category_section']['category'] ? 'selected' : '') : '' }}>--}}
+                            {{--                                {{ $category->getTranslation('title', \App::getLocale()) }}--}}
+                            {{--                            </option>--}}
 
                             <option value="{{ $category->id }}" {{ @$contents && arrayCheck('category', $contents['category_section']) ? (in_array($category->id, $contents['category_section']['category']) ? 'selected' : '') : '' }}>
                                 {{ $category->getTranslation('title', \App::getLocale()) }}
@@ -603,7 +685,8 @@
                     <label for="bg">Type</label>
                     <select class="form-control" name="category_section_{{ $content_count }}_type">
                         @for ($i=1; $i < 6; $i++)
-                            <option value="{{$i}}" @if(@$contents && isset($contents['category_section']['type']) && $contents['category_section']['type'] == $i) selected @endif>
+                            <option value="{{$i}}"
+                                    @if(@$contents && isset($contents['category_section']['type']) && $contents['category_section']['type'] == $i) selected @endif>
                                 Type {{$i}}
                             </option>
                         @endfor
@@ -613,10 +696,10 @@
                     <label for="category_section_{{ $content_count }}_bg">Background Color (Hex)</label>
                     <div class="input-group colorpickerinput colorpicker-element" data-colorpicker-id="1">
                         <input type="text" class="form-control"
-                            name="category_section_{{ $content_count }}_bg"
-                            value="{{ @$contents && isset($contents['category_section']['bg']) ? $contents['category_section']['bg'] : 'white'}}"
-                            id="category_section_{{ $content_count }}_bg"
-                            placeholder="Background Color">
+                               name="category_section_{{ $content_count }}_bg"
+                               value="{{ @$contents && isset($contents['category_section']['bg']) ? $contents['category_section']['bg'] : 'white'}}"
+                               id="category_section_{{ $content_count }}_bg"
+                               placeholder="Background Color">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <i class="bx bxs-color-fill" style="background-color: #ffffff;"></i>
@@ -630,10 +713,10 @@
                             <label for="category_section_{{ $content_count }}_title_color">Title Color (Hex)</label>
                             <div class="input-group colorpickerinput colorpicker-element" data-colorpicker-id="1">
                                 <input type="text" class="form-control"
-                                    name="category_section_{{ $content_count }}_title_color"
-                                    value="{{ @$contents && isset($contents['category_section']['title_color']) ? $contents['category_section']['title_color'] : 'black' }}"
-                                    id="category_section_{{ $content_count }}_title_color"
-                                    placeholder="Background Color">
+                                       name="category_section_{{ $content_count }}_title_color"
+                                       value="{{ @$contents && isset($contents['category_section']['title_color']) ? $contents['category_section']['title_color'] : 'black' }}"
+                                       id="category_section_{{ $content_count }}_title_color"
+                                       placeholder="Background Color">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <i class="bx bxs-color-fill" style="background-color: black;"></i>
@@ -644,13 +727,14 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="category_section_{{ $content_count }}_title_color">Title Active Color (Hex)</label>
+                            <label for="category_section_{{ $content_count }}_title_color">Title Active Color
+                                (Hex)</label>
                             <div class="input-group colorpickerinput colorpicker-element" data-colorpicker-id="1">
                                 <input type="text" class="form-control"
-                                    name="category_section_{{ $content_count }}_title_active_color"
-                                    value="{{ @$contents && isset($contents['category_section']['title_active_color']) ? $contents['category_section']['title_active_color'] : 'black' }}"
-                                    id="category_section_{{ $content_count }}_title_active_color"
-                                    placeholder="Background Color">
+                                       name="category_section_{{ $content_count }}_title_active_color"
+                                       value="{{ @$contents && isset($contents['category_section']['title_active_color']) ? $contents['category_section']['title_active_color'] : 'black' }}"
+                                       id="category_section_{{ $content_count }}_title_active_color"
+                                       placeholder="Background Color">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <i class="bx bxs-color-fill" style="background-color: black;"></i>
@@ -696,25 +780,29 @@
                                                                              class="img-thumbnail logo-profile">
                                                                     @endif
                                                                     <div class="image-remove">
-                                                                        <a href="javascript:void(0)" class="remove"><i class="bx bx-x"></i></a>
+                                                                        <a href="javascript:void(0)" class="remove"><i
+                                                                                    class="bx bx-x"></i></a>
                                                                     </div>
                                                                 </div>
                                                             @else
                                                                 <div class="selected-media mr-2 mb-2 mt-3 ml-0">
                                                                     <img src="{{ static_asset('images/default/default-image-72x72.png') }}"
-                                                                        data-default="{{ static_asset('images/default/default-image-72x72.png') }}"
-                                                                        alt="brand-logo"
-                                                                        class="img-thumbnail logo-profile">
+                                                                         data-default="{{ static_asset('images/default/default-image-72x72.png') }}"
+                                                                         alt="brand-logo"
+                                                                         class="img-thumbnail logo-profile">
                                                                 </div>
                                                             @endif
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-10">
-                                                    <div class="input-group gallery-modal" id="btnSubmit" data-for="image"
+                                                    <div class="input-group gallery-modal" id="btnSubmit"
+                                                         data-for="image"
                                                          data-selection="single"
                                                          data-target="#galleryModal" data-dismiss="modal">
-                                                        <input type="hidden" name="banner_thumbnail_{{ $content_count }}[]" class="image-selected" value="{{ $thumbnail }}">
+                                                        <input type="hidden"
+                                                               name="banner_thumbnail_{{ $content_count }}[]"
+                                                               class="image-selected" value="{{ $thumbnail }}">
                                                         <span class="form-control">
                                                             <span class="counter">{{ $thumbnail != '' ? substr_count($thumbnail, ',') + 1 : 0 }}</span>
                                                              {{ __('file chosen') }}
@@ -726,15 +814,16 @@
                                                         </div>
                                                     </div>
                                                     <input type="text" class="form-control mt-2 mr-sm-2 menu-url-input"
-                                                        id="link" name="banner_url_{{ $content_count }}[]"
-                                                        value="{{ $banner_contents['url'][$key] ? $banner_contents['url'][$key] : '/' }}"
-                                                        placeholder="{{__('Link/Slug')}}">
+                                                           id="link" name="banner_url_{{ $content_count }}[]"
+                                                           value="{{ $banner_contents['url'][$key] ? $banner_contents['url'][$key] : '/' }}"
+                                                           placeholder="{{__('Link/Slug')}}">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-2">
-                                        <button type="button" class="btn btn-outline-danger btn-circle mb-2 remove-menu-row"
+                                        <button type="button"
+                                                class="btn btn-outline-danger btn-circle mb-2 remove-menu-row"
                                                 data-type="banner-image">
                                             <i class="bx bx-trash"></i>
                                         </button>
@@ -765,9 +854,19 @@
                     <h4>{{ __("Offer Ending Soon") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body campaign-{{ $content_count }}">
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -872,9 +971,19 @@
                     <h4>{{ __("Popular Brands") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
             <input type="hidden" name="contents[]" value="popular_brands">
@@ -890,9 +999,19 @@
                         <h4>{{ __("Top Shops") }}</h4>
                     </a>
 
-                    <button type="button" onclick="$(this).parent().parent().remove()"
-                            class="btn remove-menu-row">
-                        <i class="bx bx-trash"></i></button>
+                    <div>
+                        <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                                class="btn remove-menu-row">
+                            <i class="bx bx-trash"></i></button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-show hidden">
+                            <i class="bx bx-low-vision"></i>
+                        </button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-hide">
+                            <i class="bx bx-show"></i>
+                        </button>
+                    </div>
                 </div>
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
                 <input type="hidden" name="contents[]" value="top_sellers">
@@ -909,9 +1028,19 @@
                         <h4>{{ __('Featured Shops') }}</h4>
                     </a>
 
-                    <button type="button" onclick="$(this).parent().parent().remove()"
-                            class="btn remove-menu-row">
-                        <i class="bx bx-trash"></i></button>
+                    <div>
+                        <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                                class="btn remove-menu-row">
+                            <i class="bx bx-trash"></i></button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-show hidden">
+                            <i class="bx bx-low-vision"></i>
+                        </button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-hide">
+                            <i class="bx bx-show"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="card-body campaign-{{ $content_count }}">
                     <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -944,9 +1073,19 @@
                         <h4>{{ __('Express Shops') }}</h4>
                     </a>
 
-                    <button type="button" onclick="$(this).parent().parent().remove()"
-                            class="btn remove-menu-row">
-                        <i class="bx bx-trash"></i></button>
+                    <div>
+                        <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                                class="btn remove-menu-row">
+                            <i class="bx bx-trash"></i></button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-show hidden">
+                            <i class="bx bx-low-vision"></i>
+                        </button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-hide">
+                            <i class="bx bx-show"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="card-body campaign-{{ $content_count }}">
                     <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -979,9 +1118,19 @@
                         <h4>{{ __("Best Shops") }}</h4>
                     </a>
 
-                    <button type="button" onclick="$(this).parent().parent().remove()"
-                            class="btn remove-menu-row">
-                        <i class="bx bx-trash"></i></button>
+                    <div>
+                        <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                                class="btn remove-menu-row">
+                            <i class="bx bx-trash"></i></button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-show hidden">
+                            <i class="bx bx-low-vision"></i>
+                        </button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-hide">
+                            <i class="bx bx-show"></i>
+                        </button>
+                    </div>
                 </div>
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
                 <input type="hidden" name="contents[]" value="best_sellers">
@@ -997,9 +1146,19 @@
                     <h4>{{ __("App Download Section") }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
             <div class="card-body download_section-{{ $content_count }}">
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
@@ -1094,10 +1253,19 @@
                     <a href="javaScript:void(0)" class="d-flex"><i class="bx bx-menu move"></i>
                         <h4>{{ __("Video Shopping") }}</h4>
                     </a>
-
-                    <button type="button" onclick="$(this).parent().parent().remove()"
-                            class="btn remove-menu-row">
-                        <i class="bx bx-trash"></i></button>
+                    <div>
+                        <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                                class="btn remove-menu-row">
+                            <i class="bx bx-trash"></i></button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-show hidden">
+                            <i class="bx bx-low-vision"></i>
+                        </button>
+                        <button type="button" banner-id="{{$content_count}}"
+                                class="btn remove-menu-row home-page-hide">
+                            <i class="bx bx-show"></i>
+                        </button>
+                    </div>
                 </div>
                 <input type="hidden" name="content_numbers[]" value="{{ $content_count }}">
                 <input type="hidden" name="contents[]" value="video_shopping">
@@ -1114,9 +1282,19 @@
                     <h4>{{ __('weekly_best_products') }}</h4>
                 </a>
 
-                <button type="button" onclick="$(this).parent().parent().remove()"
-                        class="btn remove-menu-row">
-                    <i class="bx bx-trash"></i></button>
+                <div>
+                    <button type="button" onclick="$(this).parent().parent().parent().remove()"
+                            class="btn remove-menu-row">
+                        <i class="bx bx-trash"></i></button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-show hidden">
+                        <i class="bx bx-low-vision"></i>
+                    </button>
+                    <button type="button" banner-id="{{$content_count}}"
+                            class="btn remove-menu-row home-page-hide">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
             </div>
 
             <div class="card-body campaign-{{ $content_count }}">
@@ -1131,7 +1309,8 @@
                             $custom_products = \App\Models\Product::whereIn('id', $contents['custom_products'])->get();
                         @endphp
                         @foreach($custom_products as $product)
-                            <option value="{{ $product->id }}" selected>{{ $product->getTranslation('name',app()->getLocale()) }}</option>
+                            <option value="{{ $product->id }}"
+                                    selected>{{ $product->getTranslation('name',app()->getLocale()) }}</option>
                         @endforeach
                     @endif
                 </select>

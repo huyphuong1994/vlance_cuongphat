@@ -49,23 +49,23 @@ class FrontendController extends Controller
     }
 
     public function home(
-        MediaInterface $media,
-        CategoryInterface $category,
-        SellerInterface $seller,
-        ProductInterface $product,
-        BrandInterface $brand,
-        CampaignInterface $campaign,
+        MediaInterface         $media,
+        CategoryInterface      $category,
+        SellerInterface        $seller,
+        ProductInterface       $product,
+        BrandInterface         $brand,
+        CampaignInterface      $campaign,
         VideoShoppingInterface $shopping,
-        Request $request
-    ) : \Illuminate\Http\JsonResponse
+        Request                $request
+    ): \Illuminate\Http\JsonResponse
     {
         try {
 
-            $data           = $this->parseSettingsData($media, $category, $seller, $brand, $campaign,$shopping,$request->page,$product);
+            $data = $this->parseSettingsData($media, $category, $seller, $brand, $campaign, $shopping, $request->page, $product);
 
             return response()->json([
-                'components'        => $data['components'],
-                'component_names'   => $data['component_names'],
+                'components' => $data['components'],
+                'component_names' => $data['component_names'],
                 'has_more_data' => !(count(settingHelper('home_page_contents')) < $request->page * 3),
             ]);
         } catch (\Exception $e) {
@@ -80,7 +80,7 @@ class FrontendController extends Controller
 
         try {
             $data = [
-                'contact'       =>new ContactResource($pageRepository->contactPage()),
+                'contact' => new ContactResource($pageRepository->contactPage()),
             ];
             return response()->json($data);
         } catch (\Exception $e) {
@@ -90,15 +90,15 @@ class FrontendController extends Controller
         }
     }
 
-    public function page(Request $request,PageRepository $pageRepository): \Illuminate\Http\JsonResponse
+    public function page(Request $request, PageRepository $pageRepository): \Illuminate\Http\JsonResponse
     {
         try {
             $page = $pageRepository->pageBySlug($request->slug);
             $data = [
                 'page' => [
-                    'title'     => $page->getTranslation('title',languageCheck()),
-                    'link'      => $page->link,
-                    'content'   => $page->getTranslation('content',languageCheck())
+                    'title' => $page->getTranslation('title', languageCheck()),
+                    'link' => $page->link,
+                    'content' => $page->getTranslation('content', languageCheck())
                 ]
             ];
             return response()->json($data);
@@ -208,7 +208,7 @@ class FrontendController extends Controller
         }
     }
 
-    public function sellers(SellerInterface $seller,Request $request): \Illuminate\Http\JsonResponse
+    public function sellers(SellerInterface $seller, Request $request): \Illuminate\Http\JsonResponse
     {
         try {
             $data = [
@@ -264,23 +264,22 @@ class FrontendController extends Controller
             session()->put('lang', $locale);
             $language = $language->getByLocale($locale);
 
-            if (authUser() && $language)
-            {
+            if (authUser() && $language) {
                 authUser()->update([
                     'lang_code' => $locale
                 ]);
             }
 
-            $data   = [
-                'active_language'   => $language,
+            $data = [
+                'active_language' => $language,
             ];
 
-            session()->put('text_direction',$language->text_direction);
+            session()->put('text_direction', $language->text_direction);
 
             return response()->json($data);
         } catch (\Exception $e) {
             return response()->json([
-                'error' =>$e->getMessage()
+                'error' => $e->getMessage()
             ]);
         }
 
@@ -292,8 +291,8 @@ class FrontendController extends Controller
             $lang = languageCheck();
 
             $data = [
-                'lang'      => file_exists(base_path('resources/lang/' . $lang . '.json')) ?  $lang  : 'en',
-                'language'  => $language->getByLocale($lang),
+                'lang' => file_exists(base_path('resources/lang/' . $lang . '.json')) ? $lang : 'en',
+                'language' => $language->getByLocale($lang),
             ];
 
             return response()->json($data);
@@ -309,8 +308,7 @@ class FrontendController extends Controller
         try {
             $currency = $currency->currencyByCode($code);
 
-            if (authUser() && $currency)
-            {
+            if (authUser() && $currency) {
                 authUser()->update([
                     'currency_code' => $currency->currency_code
                 ]);
@@ -326,9 +324,8 @@ class FrontendController extends Controller
             if ($currency) {
                 session()->put('currency', $currency->id);
 
-                $response = curlRequest("https://api.exchangerate.host/convert?from=USD&to=$code",[],'GET');
-                if (property_exists($response,'result'))
-                {
+                $response = curlRequest("https://api.exchangerate.host/convert?from=USD&to=$code", [], 'GET');
+                if (property_exists($response, 'result')) {
                     $rate = $response->result;
                     if ($rate != $currency->exchange_rate) {
                         $currency->exchange_rate = $rate;
@@ -340,18 +337,17 @@ class FrontendController extends Controller
                         'success' => __('currency_rate_updated'),
                         'active_currency' => $currency
                     ]);
-                }
-                else{
+                } else {
                     return response()->json([
                         'error' => __('Oops...Something Went Wrong')
                     ]);
                 }
             } else {
                 return response()->json([
-                    'active_currency'   => [
+                    'active_currency' => [
                         'exchange_rate' => 1,
-                        'name'          => 'USD',
-                        'symbol'        => '$',
+                        'name' => 'USD',
+                        'symbol' => '$',
                     ]
                 ]);
             }
@@ -409,7 +405,8 @@ class FrontendController extends Controller
             ]);
         }
     }
-    public function videoShoppingDetails(VideoShoppingInterface $shopping,$slug): \Illuminate\Http\JsonResponse
+
+    public function videoShoppingDetails(VideoShoppingInterface $shopping, $slug): \Illuminate\Http\JsonResponse
     {
         try {
             $data = [

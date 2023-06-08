@@ -119,7 +119,8 @@ export default Vue.mixin({
         },
         getUrl(url) {
             let base_url = document.querySelector('meta[name="base_url"]').getAttribute('content');
-            return base_url + '/' + url.replace('public/', "");
+            // return base_url + '/' + url.replace('public/', "");
+            return base_url + '/' + url;
         },
         logout() {
             this.$store.commit('getCountCompare', true);

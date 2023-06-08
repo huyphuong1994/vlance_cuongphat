@@ -109,7 +109,6 @@ export default {
   },
   computed: {
     homeComponents() {
-      console.log('123', this.$store.getters.getHomeComponents)
       return this.$store.getters.getHomeComponents;
     },
     homeResults() {
@@ -128,7 +127,7 @@ export default {
     },
     supportedComponents() {
       // console.log('supportedComponents', this.supportedComponents)
-      // this.$store.commit('setHomeResults', this.results);
+      this.$store.commit('setHomeResults', this.results);
     },
     results() {
       this.$store.commit('setHomeResults', this.results);
@@ -174,7 +173,7 @@ export default {
       let url = this.getUrl('home/page?page=' + this.paginate);
       this.scroll_continue = false;
 
-      if (this.homeScroller) {
+      // if (this.homeScroller) {
         axios.get(url).then((response) => {
           if (response.data.error) {
             toastr.error(response.data.error, this.lang.Error + ' !!');
@@ -193,8 +192,8 @@ export default {
               this.scrollData();
             }
           }
-        });
-      }
+        })
+      // }
     },
     async componentAppend(home_component) {
       let components = Object.keys(home_component);

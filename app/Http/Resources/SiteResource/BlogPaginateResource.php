@@ -10,6 +10,8 @@ class BlogPaginateResource extends ResourceCollection
     {
         return [
             'data' => $this->collection->map(function ($data) {
+                dd($data->thumbnail);
+
                 return [
                     'id'                    => $data->id,
                     'slug'                  => $data->slug,

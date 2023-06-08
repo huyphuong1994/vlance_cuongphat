@@ -415,7 +415,7 @@ textarea.form-control {
 }
 
 section {
-	padding: 15px 0;
+	padding: 10px 0;
 }
 
 .brand-section.item-space-rmv {
@@ -10278,6 +10278,15 @@ textarea.form-control.affiliate_link {
 			justify-content: center;
 		}
 	}
+}
+
+.h-600 {
+	height: 600px;
+}
+
+.scroll-product {
+	max-height: 550px;
+	overflow-y: auto;
 }
 
 @import 'utils/development.scss';

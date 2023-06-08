@@ -374,6 +374,7 @@
 @push('page-script')
     <script type="text/javascript" src="{{ static_asset('admin/js/dropzone.min.js') }}"></script>
     <script src="{{ static_asset('admin/js/sortable.js') }}"></script>
+    <script src="{{ static_asset('admin/js/hidden.js') }}"></script>
     <script src="{{ static_asset('admin/js/jquery-sortable.js') }}"></script>
     <script src="{{ static_asset('admin/js/ajax-sortable-menu.js') }}"></script>
     <script type="text/javascript" src="{{static_asset('admin/js/ajax-div-load.js') }}"></script>

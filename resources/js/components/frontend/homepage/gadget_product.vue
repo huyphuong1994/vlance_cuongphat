@@ -1,199 +1,211 @@
 <template>
-  <section :style="{'background-color': setting?.bg ? setting?.bg : '#fff'}" class="products-section category-products ajax_scroll my-4">
-    <div v-if="setting && setting.type == 5"  class="flex justify-content-center w-full">
-      <h2 :style="{'color': setting.title_active_color}" class="text-uppercase text-center">{{ lang.danh_muc_sp_noi_bat }}</h2>
+  <div style="margin: 24px 0">
+    <div :style="{'border-bottom': `2px solid ${setting.title_active_color}`}"
+         v-if="setting && setting.type == 5" class="container flex justify-content-center w-full bg-white">
+      <h2 :style="{'color': setting.title_active_color}" class="text-uppercase text-center">{{
+          lang.danh_muc_sp_noi_bat
+        }}</h2>
     </div>
-    <div class="container" v-if="data && activeCategory">
-      <div class="p-3 position-relative">
-        <div
-            class="d-flex align-items-center mb-3 nowrap justify-content-start category-list"
-            style="border-bottom: 1px solid #e1e1e1"
-            :class="{ 'title-bg' : addons.includes('ishopet') }">
-          <button
-              v-for="category in categories"
-              :key="category.id"
-              @click="() => changeCategory(category)"
-              class="bg-white category-item"
-              :class="{ 'category-item-active' : activeCategory.id == category.id }"
-              :style="{
-						'color': activeCategory.id == category.id
-							? setting.title_active_color
-							: setting.title_color,
-						'border': '1px solid',
-						'border-color': setting.bg
-					}">{{ category.title }}
-          </button>
-        </div>
-        <div class="row">
-          <div class="col-md-4"
-               v-if="
+    <section :style="{'background-color': setting?.bg ? setting?.bg : '#fff'}"
+             class="container products-section category-products ajax_scroll">
+      <div class="" v-if="data && activeCategory">
+        <div class="position-relative">
+          <div
+              class="d-flex align-items-center mb-3 nowrap justify-content-start category-list"
+              style="border-bottom: 1px solid #e1e1e1"
+              :class="{ 'title-bg' : addons.includes('ishopet') }">
+            <button
+                v-for="category in categories"
+                :key="category.id"
+                @click="() => changeCategory(category)"
+                class="bg-white category-item"
+                :class="{ 'category-item-active' : activeCategory.id == category.id }"
+                :style="{
+				          'color': activeCategory.id == category.id
+							    ? setting.title_active_color
+							    : setting.title_color,
+						      'border': 'none',
+						      'border-color': setting.bg
+					      }"
+            >
+              {{ category.title }}
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-md-5"
+                 v-if="
 						setting &&
 						banners.length > 0 &&
 						window.width >= breakpoint[4] &&
 						(setting.type == 1 || setting.type == 3)
 					">
-            <VueSlickCarousel v-bind="slick_settings">
-              <div class="category-product h-100" v-for="(banner, index) in banners" :key="index">
-                <div class="thumb h-100" v-if="banner">
-                  <a v-if="urlCheck(banner.url)" :href="banner.url" class="add-banner h-100">
-                    <img :src="banner.thumbnail" alt="" class="img-fluid h-100"/>
-                  </a>
-                  <router-link v-else :to="banner.url" class="add-banner h-100">
-                    <img :src="banner.thumbnail" alt="" class="img-fluid h-100"/>
-                  </router-link>
+              <VueSlickCarousel v-bind="slick_settings">
+                <div class="category-product h-100" v-for="(banner, index) in banners" :key="index">
+                  <div class="thumb h-600" v-if="banner">
+                    <a v-if="urlCheck(banner.url)" :href="banner.url" class="add-banner h-100">
+                      <img :src="banner.thumbnail" alt="" class="img-fluid h-100"/>
+                    </a>
+                    <router-link v-else :to="banner.url" class="add-banner h-100">
+                      <img :src="banner.thumbnail" alt="" class="img-fluid h-100"/>
+                    </router-link>
+                  </div>
                 </div>
-              </div>
-            </VueSlickCarousel>
-          </div>
-          <div :class="[
-						window.width < breakpoint[4] || (setting.type != 1 && setting.type != 3) ? 'col-lg-12' : 'col-lg-8'
+              </VueSlickCarousel>
+            </div>
+            <div :class="[
+						window.width < breakpoint[4] || (setting.type != 1 && setting.type != 3) ? 'col-lg-12' : 'col-lg-7'
 					]">
-            <product
-                :products="products"
-                :grid_class="grid_class()"
-                :type="setting.type"
-                :banners="banners"
-            ></product>
-            <div class="py-2 gradet-bottom" :style="{
+              <product
+                  :products="products"
+                  :grid_class="grid_class()"
+                  :type="setting.type"
+                  :banners="banners"
+              ></product>
+              <div class="py-2 gradet-bottom" :style="{
 					'text-align': window.width > breakpoint[2] ? 'center' : 'center'
 				}">
-              <div v-if="
+                <div v-if="
               setting &&
               banners.length > 0 &&
               window.width >= breakpoint[4] &&
               (setting.type == 1 || setting.type == 3)
 					  ">
-                <div class="row">
-                  <div class="col-4">
-                    <button>
-                      <router-link
-                          class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
-                          :style="{
-                      'color': setting.title_color
-                    }"
-                          :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
-                      >{{ lang.xem_toan_bo }}
-                      </router-link>
-                    </button>
-                  </div>
-                  <div class="col-4">
-                    <button>
-                      <router-link
-                          class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
-                          :style="{
-                      'color': setting.title_color
-                    }"
-                          :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
-                      >{{ lang.xem_them_12 }} <span class="icon mdi mdi-chevron-down"></span>
-                      </router-link>
-                    </button>
-                  </div>
-                  <div class="col-4">
-                    <button>
-                      <router-link
-                          class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
-                          :style="{
-                      'color': setting.title_color
-                    }"
-                          :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
-                      >{{ lang.thu_gon }} <span class="icon mdi mdi-chevron-up"></span>
-                      </router-link>
-                    </button>
+                  <div class="row">
+                    <div class="col-4">
+                      <button>
+                        <router-link
+                            class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
+                            :style="{
+                            'color': setting.title_active_color
+                          }"
+                            :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
+                        >{{ lang.xem_toan_bo }}
+                        </router-link>
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button @click="() => {
+                      this.current_page = this.current_page + 1
+                      this.getProducts(this.activeCategory)
+                    }">
+                        <div
+                            class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
+                            :style="{'color': setting.title_active_color}">
+                          {{ lang.xem_them_12 }} <span class="icon mdi mdi-chevron-down"></span>
+                        </div>
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button @click="() => {
+                      this.current_page = 0;
+                      this.getProducts(this.activeCategory)
+                    }">
+                        <div
+                            class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
+                            :style="{
+                            'color': setting.title_active_color
+                          }"
+                        >{{ lang.thu_gon }} <span class="icon mdi mdi-chevron-up"></span>
+                        </div>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
-        <div class="py-2 gradet-bottom" :style="{
+          <div class="py-2 gradet-bottom" :style="{
 					'text-align': window.width > breakpoint[2] ? 'center' : 'center'
 				}">
-          <div v-if="
+            <div v-if="
 						!(setting &&
 						banners.length > 0 &&
 						window.width >= breakpoint[4] &&
 						(setting.type == 1 || setting.type == 3))
 					">
-            <div class="row">
-              <div class="col-4">
-                <button>
-                  <router-link
-                      class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
-                      :style="{
-                      'color': setting.title_color
+              <div class="row">
+                <div class="col-4">
+                  <button>
+                    <router-link
+                        class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
+                        :style="{
+                      'color': setting.title_active_color
                     }"
-                      :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
-                  >{{ lang.xem_toan_bo }}
-                  </router-link>
-                </button>
+                        :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
+                    >{{ lang.xem_toan_bo }}
+                    </router-link>
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button @click="() => {
+                      this.current_page = this.current_page + 1
+                      this.getProducts(this.activeCategory)
+                    }">
+                    <div
+                        class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
+                        :style="{'color': setting.title_active_color}">
+                      {{ lang.xem_them_12 }} <span class="icon mdi mdi-chevron-down"></span>
+                    </div>
+                  </button>
+                </div>
+                <div class="col-4">
+                  <button @click="() => {
+                      this.current_page = 0;
+                      this.getProducts(this.activeCategory)
+                    }">
+                    <div
+                        class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
+                        :style="{
+                      'color': setting.title_active_color
+                    }"
+                    >{{ lang.thu_gon }} <span class="icon mdi mdi-chevron-up"></span>
+                    </div>
+                  </button>
+                </div>
               </div>
-              <div class="col-4">
-                <button>
-                  <router-link
-                      class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
-                      :style="{
-                      'color': setting.title_color
-                    }"
-                      :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
-                  >{{ lang.xem_them_12 }} <span class="icon mdi mdi-chevron-down"></span>
-                  </router-link>
-                </button>
-              </div>
-              <div class="col-4">
-                <button>
-                  <router-link
-                      class="bg-white p-2 d-inline-flex gap-2 btn-seemore"
-                      :style="{
-                      'color': setting.title_color
-                    }"
-                      :to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"
-                  >{{ lang.thu_gon }} <span class="icon mdi mdi-chevron-up"></span>
-                  </router-link>
-                </button>
+            </div>
+            <!--					<router-link-->
+            <!--						class="bg-white p-2 d-inline-flex gap-2 btn-seemore"-->
+            <!--						:style="{-->
+            <!--							'color': setting.title_color-->
+            <!--						}"-->
+            <!--						:to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"-->
+            <!--					>{{ lang.more_products }} <span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>-->
+          </div>
+        </div>
+      </div>
+      <div class="" v-else-if="show_shimmer">
+        <div class="title justify-content-between">
+          <shimmer :height="45"></shimmer>
+        </div>
+        <div class="row">
+          <div class="col-md-4" v-if="window.width >= breakpoint[4]">
+            <div class="products">
+              <div class="category-product">
+                <div class="thumb">
+                  <a href="#">
+                    <shimmer :height="754"></shimmer>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <!--					<router-link-->
-          <!--						class="bg-white p-2 d-inline-flex gap-2 btn-seemore"-->
-          <!--						:style="{-->
-          <!--							'color': setting.title_color-->
-          <!--						}"-->
-          <!--						:to="{ name: 'product.by.gadget', params: { slug: activeCategory.slug } }"-->
-          <!--					>{{ lang.more_products }} <span class="icon mdi mdi-name mdi-arrow-right"></span></router-link>-->
-        </div>
-      </div>
-    </div>
-    <div class="container" v-else-if="show_shimmer">
-      <div class="title justify-content-between">
-        <shimmer :height="45"></shimmer>
-      </div>
-      <div class="row">
-        <div class="col-md-4" v-if="window.width >= breakpoint[4]">
-          <div class="products">
-            <div class="category-product">
-              <div class="thumb">
-                <a href="#">
-                  <shimmer :height="754"></shimmer>
-                </a>
-              </div>
-            </div>
+          <div :class="[window.width < breakpoint[4] ? 'col-lg-12' : 'col-lg-8']">
+            <ul class="products" :class="window.width < breakpoint[4] ? 'grid-4 grid-show' : 'grid-4 product-space'">
+              <li v-for="(product, index) in 8" :key="index">
+                <div class="sg-product">
+                  <a href="javaScript:void(0)">
+                    <shimmer :height="364"></shimmer>
+                  </a>
+                </div><!-- /.sg-product -->
+              </li>
+            </ul>
           </div>
         </div>
-        <div :class="[window.width < breakpoint[4] ? 'col-lg-12' : 'col-lg-8']">
-          <ul class="products" :class="window.width < breakpoint[4] ? 'grid-4 grid-show' : 'grid-4 product-space'">
-            <li v-for="(product, index) in 8" :key="index">
-              <div class="sg-product">
-                <a href="javaScript:void(0)">
-                  <shimmer :height="364"></shimmer>
-                </a>
-              </div><!-- /.sg-product -->
-            </li>
-          </ul>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -228,7 +240,8 @@ export default {
       breakpoint: [
         0, 512, 768, 1024, 1256, 1440, 1560
       ],
-      activeCategory: null
+      activeCategory: null,
+      current_page: 0
     };
   },
   components: {
@@ -247,20 +260,18 @@ export default {
       return (this.data && this.data.setting) ? this.data.setting : null;
     },
     banners() {
-      console.log('123', this.data)
-
       return (this.data && this.data.banners) ? this.data.banners : [];
     },
     paginate() {
       var paginate = 8;
-      if (this.data && this.data.type) {
-        switch (this.data.type) {
+      if (this.data && this.data.setting.type) {
+        switch (this.data.setting.type) {
           case 1:
             paginate = 6;
             break;
 
           case 2:
-            paginate = 10;
+            paginate = 12;
             break;
 
           case 3:
@@ -272,7 +283,7 @@ export default {
             break;
 
           case 5:
-            paginate = 10;
+            paginate = 8;
             break;
 
           default:
@@ -280,7 +291,7 @@ export default {
         }
       }
 
-      return paginate;
+      return paginate + this.current_page * 12;
     }
   },
   created() {
@@ -361,7 +372,8 @@ export default {
       this.getProducts(category);
     },
     getProducts(category) {
-      this.products = [];
+      // console.log('123', this.paginate);
+      // this.products = [];
       this.show_shimmer = true;
       const url = document.querySelector('meta[name="base_url"]').getAttribute('content');
       axios.get(url + '/home/filtered_products', {

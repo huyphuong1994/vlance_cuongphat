@@ -214,16 +214,15 @@
     <!--      </div>&lt;!&ndash; /.container &ndash;&gt;-->
     <!--    </div>&lt;!&ndash; /.footer-bottom &ndash;&gt;-->
 
-    <!--		<div class="mb-bottom"></div>-->
-
-    <!--		<div class="yoori&#45;&#45;cookies" v-if="checkGDPR() && gdpr">-->
-    <!--			<div class="cookie-content" v-html="settings.gdpr"> </div>-->
-    <!--			<div class="cookie-btn">-->
-    <!--				<button type="button" @click="setGDPR">{{ lang.accept_all }}</button>-->
-    <!--			</div>-->
-    <!--		</div>-->
-    <!--		<div class="btnTOP"><span class="icon mdi mdi-name mdi-chevron-up"></span></div>-->
-    <!--    <chat_system v-if="addons.includes('chat_system')"></chat_system>-->
+    		<div class="mb-bottom"></div>
+    		<div class="yoori--cookies" v-if="checkGDPR() && gdpr">
+    			<div class="cookie-content" v-html="settings.gdpr"> </div>
+    			<div class="cookie-btn">
+    				<button type="button" @click="setGDPR">{{ lang.accept_all }}</button>
+    			</div>
+    		</div>
+    		<div class="btnTOP"><span class="icon mdi mdi-name mdi-chevron-up"></span></div>
+        <chat_system v-if="addons.includes('chat_system')"></chat_system>
   </footer><!-- /.footer-section -->
 </template>
 
@@ -297,7 +296,7 @@ export default {
       return localStorage.setItem("gdpr", "1");
     },
     classObj() {
-      return [this.settings.seller_system == 1 && !this.authUser ? "col-lg-2" : "col-lg-3"];
+      return [this.settings.seller_system == 1 && !this.authUser ? "col-lg-3" : "col-lg-3"];
     }
   },
 };

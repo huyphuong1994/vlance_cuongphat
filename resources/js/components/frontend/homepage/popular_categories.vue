@@ -1,7 +1,7 @@
 <template>
   <section class="categories-section"
            style="
-           background-image: url('../ecommerce/public/images/baner-category.png');
+           background-image: url('../public/images/baner-category.jpg');
            margin-top: 30px;
 ">
     <div class="container" v-if="lengthCounter(countCategories) >0">
@@ -24,9 +24,9 @@
 <!--        </VueSlickCarousel>-->
 
         <div class="row">
-          <div class="col-lg-3 mb-4" v-for="(category,index) in popular_categories" :key="index">
-              <div class="w-100 d-flex align-middle" style="background: #e6dbb9;">
-                <a class="slider_div py-3 px-4 fs-5 fw-normal" @mouseup="checkEl($event)" :href="getUrl('category/'+category.slug)"
+          <div class="col-lg-3 mb-2" v-for="(category,index) in popular_categories" :key="index">
+              <div class="w-100 d-flex align-middle" style="background: linear-gradient(to right, #CCFFCC, #88adf7);">
+                <a class="slider_div py-1 px-4 fs-5 fw-normal" @mouseup="checkEl($event)" :href="getUrl('category/'+category.slug)"
                    @click.prevent="routerNavigator('product.by.category',category.slug)">
                 {{category.title}}
                 </a>
