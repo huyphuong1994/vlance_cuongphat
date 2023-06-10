@@ -215,7 +215,7 @@
                        @click.stop="searchDropdown"/>
                 <a class="search_btn cursor_pointer"
                    @click="$router.push({ name: 'search.product', query: { q: searchKey } })">
-                  <img :src="getUrl('public/public/images/others/search.svg')" alt="Product Search"
+                  <img :src="getUrl('public/images/others/search.svg')" alt="Product Search"
                        class="img-fluid"/>
                 </a>
                 <ul @click.stop class="dropdown-menu dropdown-menu-right show w-100 search_dropdown"
@@ -362,7 +362,7 @@
                 <router-link :to="{ name: 'cart' }" class="d-flex align-items-center gap-3">
                   <div class="icon">
                     <img alt="bag Icon" class="img-fluid"
-                         :src="getUrl('public/public/images/others/bag_white.svg')"/>
+                         :src="getUrl('public/images/others/bag_white.svg')"/>
                     <span v-if="carts && carts.length > 0" class="badge">{{
                         carts.filter(cart =>
                             cart.is_buy_now == false).length

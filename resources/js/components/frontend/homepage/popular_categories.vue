@@ -1,7 +1,7 @@
 <template>
   <section class="categories-section"
            style="
-           background-image: url('../public/images/baner-category.jpg');
+           background-image: url('images/baner-category.jpg');
            margin-top: 30px;
 ">
     <div class="container" v-if="lengthCounter(countCategories) >0">
