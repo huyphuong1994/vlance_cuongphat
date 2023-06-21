@@ -15,17 +15,18 @@
               style="border-bottom: 1px solid #e1e1e1"
               :class="{ 'title-bg' : addons.includes('ishopet') }">
             <button
-                v-for="category in categories"
+                v-for="(category, index) in categories"
                 :key="category.id"
                 @click="() => changeCategory(category)"
                 class="bg-white category-item"
-                :class="{ 'category-item-active' : activeCategory.id == category.id }"
+                :class="{ 'category-item-active' : index == 0 }"
                 :style="{
-				          'color': activeCategory.id == category.id
+				          'color': index == 0
 							    ? setting.title_active_color
 							    : setting.title_color,
 						      'border': 'none',
-						      'border-color': setting.bg
+						      'border-color': setting.bg,
+						      'background-color': activeCategory.id == category.id && index != 0 ? setting.title_active_color + '!important' : '#fff !important'
 					      }"
             >
               {{ category.title }}
