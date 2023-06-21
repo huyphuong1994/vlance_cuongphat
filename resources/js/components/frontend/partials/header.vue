@@ -210,9 +210,14 @@
           <div class="sg-search">
             <div class="search-form">
               <div class="btn-group w-100">
-                <input v-model="searchKey" type="text" class="form-control"
-                       :placeholder="lang.looking_for" @keyup="searchProducts"
-                       @click.stop="searchDropdown"/>
+                <input
+                    v-model="searchKey"
+                    type="text"
+                    class="form-control"
+                    :placeholder="lang.looking_for"
+                    @keyup="searchProducts"
+                    @keydown.enter="$router.push({ name: 'search.product', query: { q: searchKey } })"
+                    @click.stop="searchDropdown"/>
                 <a class="search_btn cursor_pointer"
                    @click="$router.push({ name: 'search.product', query: { q: searchKey } })">
                   <img :src="getUrl('public/images/others/search.svg')" alt="Product Search"
@@ -255,30 +260,30 @@
                  v-if="!addons.includes('ishopet')">
               <div class="container">
                 <div class="bottom-content">
-                            <div class="sg-categorie-menu categorie-lg align-self-lg-center">
-<!--                              <div class="top-content">-->
-<!--                                <button class="sg-toggle" @click="toggleCategory">-->
-<!--                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">-->
-<!--                                    <g id="list" transform="translate(0 -3)">-->
-<!--                                      <path id="Path_4186" data-name="Path 4186"-->
-<!--                                            d="M7,6H23a1,1,0,0,0,0-2H7A1,1,0,0,0,7,6Z" fill="#fff"/>-->
-<!--                                      <path id="Path_4187" data-name="Path 4187"-->
-<!--                                            d="M23,11H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
-<!--                                      <path id="Path_4188" data-name="Path 4188"-->
-<!--                                            d="M23,18H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
-<!--                                      <circle id="Ellipse_349" data-name="Ellipse 349" cx="2" cy="2" r="2"-->
-<!--                                              transform="translate(0 3)" fill="#fff"/>-->
-<!--                                      <circle id="Ellipse_350" data-name="Ellipse 350" cx="2" cy="2" r="2"-->
-<!--                                              transform="translate(0 10)" fill="#fff"/>-->
-<!--                                      <circle id="Ellipse_351" data-name="Ellipse 351" cx="2" cy="2" r="2"-->
-<!--                                              transform="translate(0 17)" fill="#fff"/>-->
-<!--                                    </g>-->
-<!--                                  </svg>-->
-<!--                                </button>-->
-<!--                                <span>{{ lang.all_categories }}</span>-->
-<!--                              </div>-->
-                              <sidebar_categories ref="sidebar_category" :home="1"></sidebar_categories>
-                            </div>
+                  <div class="sg-categorie-menu categorie-lg align-self-lg-center">
+                    <!--                              <div class="top-content">-->
+                    <!--                                <button class="sg-toggle" @click="toggleCategory">-->
+                    <!--                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">-->
+                    <!--                                    <g id="list" transform="translate(0 -3)">-->
+                    <!--                                      <path id="Path_4186" data-name="Path 4186"-->
+                    <!--                                            d="M7,6H23a1,1,0,0,0,0-2H7A1,1,0,0,0,7,6Z" fill="#fff"/>-->
+                    <!--                                      <path id="Path_4187" data-name="Path 4187"-->
+                    <!--                                            d="M23,11H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
+                    <!--                                      <path id="Path_4188" data-name="Path 4188"-->
+                    <!--                                            d="M23,18H7a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z" fill="#fff"/>-->
+                    <!--                                      <circle id="Ellipse_349" data-name="Ellipse 349" cx="2" cy="2" r="2"-->
+                    <!--                                              transform="translate(0 3)" fill="#fff"/>-->
+                    <!--                                      <circle id="Ellipse_350" data-name="Ellipse 350" cx="2" cy="2" r="2"-->
+                    <!--                                              transform="translate(0 10)" fill="#fff"/>-->
+                    <!--                                      <circle id="Ellipse_351" data-name="Ellipse 351" cx="2" cy="2" r="2"-->
+                    <!--                                              transform="translate(0 17)" fill="#fff"/>-->
+                    <!--                                    </g>-->
+                    <!--                                  </svg>-->
+                    <!--                                </button>-->
+                    <!--                                <span>{{ lang.all_categories }}</span>-->
+                    <!--                              </div>-->
+                    <sidebar_categories ref="sidebar_category" :home="1"></sidebar_categories>
+                  </div>
                   <div class="right-content">
                     <div class="sg-menu d-flex justify-content-between">
                       <nav class="navbar navbar-expand-lg">
@@ -359,17 +364,16 @@
               </li> -->
 
               <li class="sg-dropdown cart">
-                <router-link :to="{ name: 'cart' }" class="d-flex align-items-center gap-3">
+                <router-link :to="{ name: 'cart' }" class="d-flex align-items-center gap-4">
                   <div class="icon">
-                    <img alt="bag Icon" class="img-fluid"
+                    <img style="max-width: 42px; width: 42px;" alt="bag Icon" class="img-fluid"
                          :src="getUrl('public/images/others/bag_white.svg')"/>
                     <span v-if="carts && carts.length > 0" class="badge">{{
                         carts.filter(cart =>
                             cart.is_buy_now == false).length
                       }}</span>
                   </div>
-                  <div class="text-white text-bold text-uppercase pl-4" v-if="!carts || carts.length == 0">Giỏ hàng
-                  </div>
+                  <div class="text-white text-bold text-uppercase pl-4" v-if="!carts || carts.length == 0">Giỏ hàng</div>
                 </router-link>
                 <div class="sg-dropdown-menu" v-if="carts && carts.length > 0">
                   <span class="title">{{ lang.cart_items }}</span>

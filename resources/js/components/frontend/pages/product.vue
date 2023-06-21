@@ -36,7 +36,7 @@
 							<span class="base" v-if="product.special_discount_check > 0">{{ product.special_discount_type == "flat" ? priceFormat(product.special_discount_check) + " " + lang.off : product.special_discount_check + "% " + lang.off }} </span>
 							<span v-if="product.current_stock == 0 && !product.is_classified" class="base stock_badge">{{ lang.out_of_stock }}</span>
 							<span class="base reword-badge" v-if="addons.includes('reward') && product.reward > 0">{{ lang.reward_point }}: {{ product.reward }}</span>
-							<img :src="product.image_190x230" :alt="product.product_name" class="img-fluid" loading="lazy" style="object-fit: cover;  height: 150px"/>
+							<img :src="product.image_190x230" :alt="product.product_name" class="img-fluid" loading="lazy" style="object-fit: cover"/>
 						</div>
 					</a>
 					<div class="product-info">

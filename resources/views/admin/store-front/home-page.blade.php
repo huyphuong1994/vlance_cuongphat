@@ -16,7 +16,8 @@
                     <div class="alert alert-light alert-has-icon p-0 mb-0">
                         <div class="alert-icon pl-2"><i class="bx bx-bulb"></i></div>
                         <small id="passwordHelpBlock" class="form-text">
-                            {{__('If you want to use others web link like (https://www.google.com/maps,https://www.facebook.com/profile) then insert link, otherwise insert just slug ("/all-blogs")')}}
+                            {{__('Nếu bạn muốn sử dụng liên kết web khác như (https://www.google.com/maps,https://www.facebook.com/profile) thì chèn liên kết, nếu không thì chỉ chèn slug ("/all-blogs")
+')}}
                         </small>
                     </div>
                 </div>

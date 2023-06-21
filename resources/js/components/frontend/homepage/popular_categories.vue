@@ -2,7 +2,7 @@
   <section class="categories-section"
            style="
            background-image: url('images/baner-category.jpg');
-           margin-top: 30px;
+           margin-top: 5px;
 ">
     <div class="container" v-if="lengthCounter(countCategories) >0">
       <div class="justify-content-between" :class="{ 'title-bg' : addons.includes('ishopet') }">

@@ -41,6 +41,10 @@ class ProductController extends Controller
         $this->review = $review;
     }
 
+    public function setSlugAuto(Request $request)
+    {dd('dsầdsf');
+    }
+
     public function productDetails(Request $request, $slug, ColorInterface $color, AttributeInterface $attribute): \Illuminate\Http\JsonResponse
     {
         if ($request->referral_code && addon_is_activated('affiliate')) {
@@ -639,7 +643,7 @@ class ProductController extends Controller
         CategoryInterface $category,
         BrandInterface $brand,
         SellerProfileInterface $profile
-    ) : \Illuminate\Http\JsonResponse 
+    ) : \Illuminate\Http\JsonResponse
     {
         try {
             $page = [];

@@ -32,6 +32,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('set-slug-auto-product', [ProductController::class, 'setSlugAutoProduct']);
+Route::post('set-slug-auto-category', [CategoryController::class, 'setSlugAutoCategory']);
+
 Route::prefix('v100')->group(function () {
     Route::middleware(['CheckApiKey'])->group(function () {
         Route::post('login', [AuthController::class, 'login']);
